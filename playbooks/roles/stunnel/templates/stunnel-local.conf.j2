@@ -2,4 +2,4 @@ client = yes
 
 [stunnel]
 accept = 127.0.0.1:{{ stunnel_local_port }}
-connect = {{ streisand_ipv4_address }}:{{ stunnel_remote_port }}
+connect = {{ streisand_domain }}:{{ stunnel_remote_port }}

@@ -16,7 +16,7 @@ SSH Tunnel
 ### Windows ###
 1. Download [PuTTY](/mirror/ssh/) and run it.
 1. Go to the *Session* section.
-1. Enter `{{ streisand_ipv4_address }}` in the Host Name field.
+1. Enter `{{ streisand_domain }}` in the Host Name field.
 1. Enter `443` in the Port field.
    * Port {{ ssh_port }} is available as an option if your network does not block it.
 1. Go to Connection --> Data.
@@ -72,7 +72,7 @@ You are now connected and have a SOCKS proxy up and running that is ready to for
          Host {{ streisand_server_name }}
            User           forward
            Port           443
-           HostName       {{ streisand_ipv4_address }}
+           HostName       {{ streisand_domain }}
            IdentitiesOnly yes
            IdentityFile   ~/.ssh/streisand_rsa
 
@@ -101,7 +101,7 @@ Sshuttle is a simple VPN tunnelling solution that operates over the SSH transpor
          Host {{ streisand_server_name }}
            User           sshuttle
            Port           443
-           HostName       {{ streisand_ipv4_address }}
+           HostName       {{ streisand_domain }}
            IdentitiesOnly yes
            IdentityFile   ~/.ssh/streisand_rsa
 
@@ -137,7 +137,7 @@ Sshuttle is a simple VPN tunnelling solution that operates over the SSH transpor
 1. Start the application. It will be listed as *SPT* in your launcher, and its icon looks like a train tunnel.
 1. Tap the menu icon in the lower-right of your screen.
 1. Tap *Settings*.
-1. Tap *Host name* and enter `{{ streisand_ipv4_address }}`.
+1. Tap *Host name* and enter `{{ streisand_domain }}`.
 1. Tap *User Name* and enter `forward`.
 1. Tap *Port* and enter `443`.
    * Port {{ ssh_port }} is available if your network does not block it.

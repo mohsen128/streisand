@@ -10,7 +10,7 @@ verify-x509-name {{ openvpn_server_common_name.stdout }} name
 tls-version-min 1.2
 compress
 verb 3
-route {{ streisand_ipv4_address }} 255.255.255.255 net_gateway
+route {{ streisand_domain }} 255.255.255.255 net_gateway
 
 <ca>
 {{ openvpn_ca_contents.stdout }}
